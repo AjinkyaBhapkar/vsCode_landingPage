@@ -13,99 +13,113 @@ function App() {
       <div
         id="navbar"
         style={{
-          width: "1240px",
-          margin: "4px auto 0 auto",
-          display: "flex",
-          backgroundColor: "rgb(14,14,14)",
-          color: "rgb(155, 163, 180)",
-          alignItems: "center",
-          padding: "0 40px",
+          borderBottom: "0.8px solid rgba(255, 255, 255, 0.12)",
+          position: "sticky",
+          top: "0",
+          zIndex: "1000",
         }}
       >
-        <img src={navbarLogo} style={{ height: "25px" }} alt="" />
+        <div
+          style={{
+            width: "1240px",
+            margin: "4px auto 0 auto",
+            display: "flex",
+            backgroundColor: "rgb(14,14,14)",
+            color: "rgb(155, 163, 180)",
+            alignItems: "center",
+            padding: "0 40px",
+          }}
+        >
+          <img src={navbarLogo} style={{ height: "25px" }} alt="" />
 
-        <span
-          id="logo"
-          style={{
-            color: "rgb(233, 234, 235)",
-            fontWeight: "600",
-            fontSize: "20px",
-            padding: "15px 15px 15px 15px",
-          }}
-        >
-          Visual Studio Code
-        </span>
-        <span
-          style={{
-            color: "#9ba3b4",
-            fontSize: "16px",
-            fontWeight: "500",
-          }}
-        >
-          <span style={{ padding: "0 12px" }}>Docs</span>
-          <span style={{ padding: "0 12px" }}>Updates</span>
-          <span style={{ padding: "0 12px" }}>Blog</span>
-          <span style={{ padding: "0 12px" }}>API</span>
-          <span style={{ padding: "0 12px" }}>Extensions</span>
-          <span style={{ padding: "0 12px" }}>FAQ</span>
-          <span style={{ padding: "0 12px" }}>Learn</span>
-        </span>
-        <span
-          style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}
-        >
           <span
-            id="theme"
-            style={{ marginRight: "4px", padding: "1px 6px 1px 6px" }}
-          >
-            <img
-              style={{ height: "20px" }}
-              src="https://code.visualstudio.com/assets/icons/theme-light.svg"
-              alt=""
-            />
-          </span>
-          <span
+            id="logo"
             style={{
-              borderRadius: "4px",
-              border: "1px solid rgba(255,255,255,0.15)",
-              // padding: "5px",
-              marginRight: "8px",
-              // height: "31.6px !important",
-              display: "flex",
+              color: "rgb(233, 234, 235)",
+              fontWeight: "600",
+              fontSize: "20px",
+              padding: "15px 15px 15px 15px",
             }}
           >
-            <img
-              src="https://code.visualstudio.com/assets/icons/search-dark.svg"
-              alt=""
-              style={{ color: "black", zIndex: "100", padding: "0 6px" }}
-            />
-            <input
-              type="text"
-              placeholder="Search Docs"
-              style={{
-                border: "none",
-                // padding: "5px 0px 5px 12px",
-                height: "31.6px",
-                width: "200px",
-                backgroundColor: "inherit",
-              }}
-            ></input>
+            Visual Studio Code
           </span>
-          <button
+          <span
             style={{
-              color: "rgb(255, 255, 255)",
-              backgroundColor: "rgb(0, 105, 185)",
-              border: "none",
-              padding: "7px 15px",
-              borderRadius: "4px",
+              color: "#9ba3b4",
               fontSize: "16px",
-              fontWeight: 600,
-              margin: "0px",
+              fontWeight: "500",
             }}
           >
-            Download
-          </button>
-        </span>
+            <span style={{ padding: "0 12px" }}>Docs</span>
+            <span style={{ padding: "0 12px" }}>Updates</span>
+            <span style={{ padding: "0 12px" }}>Blog</span>
+            <span style={{ padding: "0 12px" }}>API</span>
+            <span style={{ padding: "0 12px" }}>Extensions</span>
+            <span style={{ padding: "0 12px" }}>FAQ</span>
+            <span style={{ padding: "0 12px" }}>Learn</span>
+          </span>
+          <span
+            style={{
+              marginLeft: "auto",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <span
+              id="theme"
+              style={{ marginRight: "4px", padding: "1px 6px 1px 6px" }}
+            >
+              <img
+                style={{ height: "20px" }}
+                src="https://code.visualstudio.com/assets/icons/theme-light.svg"
+                alt=""
+              />
+            </span>
+            <span
+              style={{
+                borderRadius: "4px",
+                border: "1px solid rgba(255,255,255,0.15)",
+                // padding: "5px",
+                marginRight: "8px",
+                // height: "31.6px !important",
+                display: "flex",
+              }}
+            >
+              <img
+                src="https://code.visualstudio.com/assets/icons/search-dark.svg"
+                alt=""
+                style={{ color: "black", zIndex: "100", padding: "0 6px" }}
+              />
+              <input
+                type="text"
+                placeholder="Search Docs"
+                style={{
+                  border: "none",
+                  // padding: "5px 0px 5px 12px",
+                  height: "31.6px",
+                  width: "200px",
+                  backgroundColor: "inherit",
+                }}
+              ></input>
+            </span>
+            <button
+              style={{
+                color: "rgb(255, 255, 255)",
+                backgroundColor: "rgb(0, 105, 185)",
+                border: "none",
+                padding: "7px 15px",
+                borderRadius: "4px",
+                fontSize: "16px",
+                fontWeight: 600,
+                margin: "0px",
+              }}
+            >
+              Download
+            </button>
+          </span>
+        </div>
       </div>
+
       <div
         id="message"
         style={{
@@ -1473,9 +1487,626 @@ function App() {
             rich extensions, there's something for everyone.
           </span>
         </div>
-        <div style={{ display: "grid" }}></div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "auto auto auto auto",
+            gap: "16px",
+            width: "1240px",
+            padding: "0 40px",
+            margin: "auto",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "150px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-terminal.svg"
+                alt=""
+              />
+            </div>
+
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Integrated terminal
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Use your favorite shell whether it's zsh,{" "}
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              pwsh, or git bash, all inside the editor.
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            ></span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "150px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-debug.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Run code
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Run and debug your code without
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              leaving your editor.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "150px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-version-control.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Version control
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Built-in support for git and many other
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              source control providers.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "150px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-build-tasks.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Build tasks
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Run tools and analyze their results
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              from within VS Code.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "173.6px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-local-history.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Local history
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Never lose your changes with
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              automatically tracked local history.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "173.6px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="	https://code.visualstudio.com/assets/icons/codicon-themes.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Themes
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Your theme is an extension of your
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              personality. Add some flair to your
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              editor and add your touch.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "173.6px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-accessibility.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Accessibility
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Optimized experience for screen
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              readers, high contrast themes, and
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              keyboard-only navigation.
+            </span>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(255, 255, 255, 0.04)",
+              border: "0.8px solid rgba(255, 255, 255, 0.07)",
+              borderRadius: "10px",
+              width: "248px",
+              height: "173.6px",
+              padding: "24px",
+            }}
+          >
+            <div
+              style={{
+                height: "48px",
+                width: "48px",
+                marginBottom: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.07)",
+                borderRadius: "6px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                style={{
+                  maxWidth: "24px",
+                  maxHeight: "24px",
+                }}
+                src="https://code.visualstudio.com/assets/icons/codicon-web.svg"
+                alt=""
+              />
+            </div>
+            <p
+              style={{
+                margin: "0 0 4px 0",
+                color: "rgb(233, 234, 235)",
+                fontSize: "16px",
+                fontWeight: "600",
+                paddingBottom: "8px",
+              }}
+            >
+              Web support
+            </p>
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              Whether you are on your phone,
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              tablet, or desktop, you can access your
+            </span>
+            <br />
+            <span
+              style={{
+                color: "rgb(155, 163, 180)",
+                fontSize: "14px",
+                fontWeight: "500",
+              }}
+            >
+              code from anywhere.
+            </span>
+          </div>
+        </div>
       </div>
-      <div id="footer"></div>
+      <div
+        id="footer"
+        style={{ padding: "96px 40px", width: "1240px", margin: "auto" }}
+      >
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <span>
+            <img
+              style={{ height: "18.4px", paddingRight: "20px" }}
+              src="https://code.visualstudio.com/assets/icons/x-icon.svg"
+              alt=""
+            />
+            <img
+              style={{ height: "25px", paddingRight: "20px" }}
+              src="https://code.visualstudio.com/assets/icons/github-icon.svg"
+              alt=""
+            />
+            <img
+              style={{ height: "25px" }}
+              src="https://code.visualstudio.com/assets/icons/youtube-icon.svg"
+              alt=""
+            />
+          </span>
+          <span>
+            <img
+              style={{ height: "24px" }}
+              src="https://code.visualstudio.com/assets/icons/microsoft.svg"
+              alt=""
+            />
+          </span>
+        </div>
+        <div style={{ display: "flex", marginTop: "16px" }}>
+          <span
+            style={{
+              paddingRight: "20px",
+              fontSize: "12px",
+              color: "rgb(155, 163, 180)",
+              fontWeight: "500",
+            }}
+          >
+            Support
+          </span>
+          <span
+            style={{
+              paddingRight: "20px",
+              fontSize: "12px",
+              color: "rgb(155, 163, 180)",
+              fontWeight: "500",
+            }}
+          >
+            Privacy
+          </span>
+          <span
+            style={{
+              paddingRight: "20px",
+              fontSize: "12px",
+              color: "rgb(155, 163, 180)",
+              fontWeight: "500",
+            }}
+          >
+            Terms of Use
+          </span>
+          <span
+            style={{
+              paddingRight: "20px",
+              fontSize: "12px",
+              color: "rgb(155, 163, 180)",
+              fontWeight: "500",
+            }}
+          >
+            License
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
